@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --soft-red:hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+}
+
+header {
+    width: 1440px;
+    height: 800px;
+    margin: 0 auto;
+    background-image: url("./images/desktop/image-header.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 56px;
+    padding-top: 2em;
+}
+nav {
+    padding-top: 2em;
+    width: 1380px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-left > img {
+    width: 170px;
+    margin-left: 3em;
+}
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 457px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.13px;
+}
+.header-right > a {
+    text-decoration: none;
+    color: white;
+}
+.header-right > button {
+    border-radius:28px;
+    border: none;
+    background-color: white;
+    width: 140px;
+    height: 56px;
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.11px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.header-right > button:hover {
+    color: white;
+    background-color: #78CEF5;
+}
+.grid-container {
+    margin: 0 auto;
+    width: 1440px;
+    height: 1800px;
+    display: grid;
+    grid-template-columns: 720px 720px;
+}
+.grid-item {
+    width: 720px;
+    height: 600px;
+    display: flex;
+}
+.grid-white-text-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    position: relative;
+    width: 445px;
+    height: 286px;
+}
+.grid-white-text-item > h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    font-weight: 900;
+}
+.grid-white-text-item > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color:#808397;
+}
+.grid-white-text-item > a {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+.grid-image-text-item {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 25em;
+    position: relative;
+    width: 339px;
+    text-align: center;
+}
+#grid-graphic-design > div > h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #24554A;
+}
+#grid-graphic-design > div > p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3E7467;
+    margin-top: 2em;
+}
+
+#grid-photography > div > h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #052C3B;
+    opacity: 80%;
+}
+#grid-photography > div > p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #19536C;
+    margin-top: 2em;
+}
+#grid-graphic-design {
+    background-image: url("./images/desktop/image-graphic-design.jpg");
+}
+#grid-photography {
+    background-image: url("./images/desktop/image-photography.jpg");
+}
+
+
+.testimonials {
+    margin: 0 auto;
+
+    height: 777px;
+    width: 1140px;
+}
+.testimonials > h3 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: #A7AAAD;
+    padding-top: 8em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+.testimonials-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.testimonials-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 350px;
+    height: 457px;
+}
+.testimonials-item > img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-top: 5em;
+}
+.testimonials-item > p {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #5B636D;
+    margin-top: 3.5em;
+    text-align: center;
+}
+.testimonials-item > h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: #24303E;
+    margin-top: 3.5em;
+}
+.testimonials-item > h5 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #A7AAAD;
+    margin-top: 1em;
+}
+
+
+footer {
+    margin: 0 auto;
+    width: 1440px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns:360px 360px 360px 360px;
+    height: 447px;
+}
+.footer-grid > img {
+    width: 360px;
+    height: 447px;
+}
+.footer-bottom {
+    background-color: #90D4C6;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-bottom > img {
+    margin-top: 4em;
+    width: 170px;
+    height: auto;
+    filter: invert(34%) sepia(21%) saturate(820%) hue-rotate(117deg) brightness(90%) contrast(101%);
+}
+
+.footer-bottom-links {
+    width: 297px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-bottom-links > a {
+    margin-top: 2.5em;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #458D7E;
+}
+.footer-bottom-links > a:hover {
+    margin-top: 2.5em;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 164px;
+    margin-top: 5em;
+}
+.footer-icons > img {
+    cursor: pointer;
+}
+.footer-icons > img:hover {
+    filter: brightness(0) invert(1);
+}
