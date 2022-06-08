@@ -100,6 +100,12 @@ nav {
     width: 445px;
     height: 286px;
 }
+#image-transform {
+    background-image: url("./images/desktop/image-transform.jpg");
+}
+#image-stand-out {
+    background-image: url("./images/desktop/image-stand-out.jpg");
+}
 .grid-white-text-item > h2 {
     font-family: 'Fraunces', serif;
     font-size: 40px;
@@ -286,4 +292,317 @@ footer {
 }
 .footer-icons > img:hover {
     filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width:1440px) {
+    header {
+        width: 375px;
+        height: 538px;
+        background-image: url("./images/mobile/image-header.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    header > h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 40px;
+        padding-top: 2em;
+    }
+    nav {
+        padding-top: 2em;
+        width: 538px;
+        height: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-left > img {
+        width: 124px;
+        margin-left: 2em;
+    }
+
+    .header-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 457px;
+        font-family: 'Barlow', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.13px;
+    }
+    .header-right > a {
+        display: none;
+    }
+    .header-right > button {
+        display: none;
+    }
+    .header-right > button {
+        border-radius:28px;
+        border: none;
+        background-color: white;
+        width: 140px;
+        height: 56px;
+        font-family: 'Fraunces', serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: -0.11px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .header-right > button:hover {
+        color: white;
+        background-color: #78CEF5;
+    }
+    .grid-container {
+        margin: 0 auto;
+        width: 375px;
+        height: 2698px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .grid-item {
+        width: 375px;
+    }
+    #image-transform {
+        order: 1;
+        background-image: url("./images/mobile/image-transform.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 312px;
+    }
+    #image-stand-out {
+        order: 3;
+        background-image: url("./images/mobile/image-stand-out.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 312px;
+    }
+    #grid-white-text-item-transform {
+        order: 2;
+        height: 437px;
+    }
+    #grid-white-text-item-stand-out {
+        order: 4;
+        height: 437px;
+    }
+
+    .grid-white-text-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        position: relative;
+        width: 327px;
+        height: 309px;
+        text-align: center;
+    }
+    .grid-white-text-item > h2 {
+        font-family: 'Fraunces', serif;
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: -0.23px;
+    }
+    .grid-white-text-item > p {
+        font-family: 'Barlow', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color:#808397;
+        letter-spacing: -0.13px;
+    }
+    .grid-white-text-item > a {
+        font-family: 'Fraunces', serif;
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: black;
+        text-decoration: none;
+    }
+    .grid-image-text-item {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 25em;
+        position: relative;
+        width: 339px;
+        text-align: center;
+    }
+    #grid-graphic-design > div > h3 {
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 28px;
+        color: #24554A;
+    }
+    #grid-graphic-design > div > p {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #3E7467;
+        margin-top: 2em;
+    }
+    
+    #grid-photography > div > h3 {
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 28px;
+        color: #052C3B;
+        opacity: 80%;
+    }
+    #grid-photography > div > p {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #19536C;
+        margin-top: 2em;
+    }
+    #grid-graphic-design {
+        order: 5;
+        background-image: url("./images/desktop/image-graphic-design.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+
+    }
+    #grid-photography {
+        order: 6;
+        background-image: url("./images/desktop/image-photography.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    
+    .testimonials {
+        margin: 0 auto;
+    
+        height: 1258px;
+        width: 375px;
+    }
+    .testimonials > h3 {
+        text-align: center;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 20px;
+        color: #A7AAAD;
+        padding-top: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    
+    }
+    .testimonials-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1108px;
+    }
+    .testimonials-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 350px;
+        height: 288px;
+    }
+    .testimonials-item > img {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin-top: 5em;
+    }
+    .testimonials-item > p {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #5B636D;
+        margin-top: 3.5em;
+        text-align: center;
+    }
+    .testimonials-item > h4 {
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 18px;
+        color: #24303E;
+        margin-top: 3.5em;
+    }
+    .testimonials-item > h5 {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #A7AAAD;
+        margin-top: 1em;
+    }
+    
+    
+    footer {
+        margin: 0 auto;
+        width: 375px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns:187.5px 187.5px;
+        height: 375px;
+    }
+    .footer-grid > img {
+        width: 187.5px;
+        height: 187.5px;
+    }
+    .footer-bottom {
+        background-color: #90D4C6;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-bottom > img {
+        margin-top: 4em;
+        width: 170px;
+        height: auto;
+        filter: invert(34%) sepia(21%) saturate(820%) hue-rotate(117deg) brightness(90%) contrast(101%);
+    }
+    
+    .footer-bottom-links {
+        width: 297px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer-bottom-links > a {
+        margin-top: 2.5em;
+        text-decoration: none;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #458D7E;
+    }
+    .footer-bottom-links > a:hover {
+        margin-top: 2.5em;
+        text-decoration: none;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+    }
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 164px;
+        margin-top: 5em;
+    }
+    .footer-icons > img {
+        cursor: pointer;
+    }
+    .footer-icons > img:hover {
+        filter: brightness(0) invert(1);
+    }
 }
