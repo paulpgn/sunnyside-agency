@@ -46,22 +46,24 @@ nav {
     width: 170px;
     margin-left: 3em;
 }
-.header-right {
+
+.nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 457px;
+    width: 467px;
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.13px;
 }
-.header-right > a {
+.nav > a {
     text-decoration: none;
     color: white;
 }
-.header-right > button {
+
+.nav> button {
     border-radius:28px;
     border: none;
     background-color: white;
@@ -74,10 +76,49 @@ nav {
     text-transform: uppercase;
     cursor: pointer;
 }
-.header-right > button:hover {
+.nav > button:hover {
     color: white;
     background-color: #78CEF5;
 }
+.hamburger {
+    display: none;
+}
+.icon-arrow {
+    width: 5px;
+    height: 107.5px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 130px;
+    left: 50%;
+}
+.icon-arrow:after {
+    content: "";
+    display: inline-block;
+    border-radius: 5px;
+    width: 5px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -2px;
+    right: -8px;
+}
+.icon-arrow:before {
+    content: "";
+    display: inline-block;
+    border-radius: 5px;
+    width: 5px;
+    height: 25px;
+    background-color: white;
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: -2px;
+    left: -8px;
+}
+
+
+
 .grid-container {
     margin: 0 auto;
     width: 1440px;
@@ -117,14 +158,48 @@ nav {
     font-weight: 600;
     color:#808397;
 }
-.grid-white-text-item > a {
+.learn-more-wrapper {
+    position: relative;
+    z-index: 1;
+}
+#learn-more-decoration-transform{
+    display: inline-block;
+    width: 137px;
+    height: 10px;
+    background-color: #FAD400;
+    opacity: 25%;
+    border-radius: 10px;
+    bottom: -21px;
+    left: -15px;
+    position: absolute;
+}
+#learn-more-decoration-stand{
+    display: inline-block;
+    width: 137px;
+    height: 10px;
+    background-color: #FE7766;
+    opacity: 25%;
+    border-radius: 10px;
+    bottom: -21px;
+    left: -15px;
+    position: absolute;
+}
+.learn-more-wrapper:hover #learn-more-decoration-transform, .learn-more-wrapper:hover #learn-more-decoration-stand{
+    opacity: 100%;
+}
+
+.learn-more{
+    position: absolute;
     font-family: 'Fraunces', serif;
     font-size: 15px;
+    width: 120px;
     font-weight: 900;
     text-transform: uppercase;
     color: black;
     text-decoration: none;
+    z-index: 1;
 }
+
 .grid-image-text-item {
     display: flex;
     flex-direction: column;
@@ -172,11 +247,10 @@ nav {
 
 .testimonials {
     margin: 0 auto;
-
     height: 777px;
     width: 1140px;
 }
-.testimonials > h3 {
+.testimonials-list-title > h3 {
     text-align: center;
     font-family: 'Fraunces', serif;
     font-weight: 900;
@@ -188,6 +262,11 @@ nav {
 
 }
 .testimonials-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.testimonials-list-items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -326,40 +405,95 @@ footer {
         width: 124px;
         margin-left: 2em;
     }
-
+    
     .header-right {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        width: 457px;
+        width:427px;
         font-family: 'Barlow', sans-serif;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.13px;
     }
-    .header-right > a {
+    .nav {
         display: none;
     }
-    .header-right > button {
-        display: none;
-    }
-    .header-right > button {
-        border-radius:28px;
-        border: none;
+    .nav.show {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:305px;
+        height: 329px;
+        top: 200px;
+        right: 146px;
         background-color: white;
-        width: 140px;
-        height: 56px;
-        font-family: 'Fraunces', serif;
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: -0.11px;
-        text-transform: uppercase;
-        cursor: pointer;
+
     }
-    .header-right > button:hover {
-        color: white;
-        background-color: #78CEF5;
+    .nav.show::after {
+        content: "";
+        display : inline-block;
+        position: absolute;
+        top: -24px;
+        right: 0;
+        border-bottom : 24px solid white;
+        border-left : 24px solid transparent;
+    }
+    .nav.show > a {
+        color: #808397;
+    }
+    .nav.show > button {
+        background-color:#FBD600 ;
+    }
+    .hamburger-wrapper {
+        width: 24px;
+        cursor: pointer;
+        position: relative;
+        left: 0;
+        background-color: white;
+    }
+    .hamburger-wrapper.show {
+        width: 24px;
+        cursor: pointer;
+        position: relative;
+        left: -170px;
+        background-color: white;
+    }
+    .hamburger {
+        display: block;
+        width: 24px;
+        height: 2px;
+
+    }
+    .hamburger:after {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: -6px;
+    }
+    .hamburger:before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 6px;
+    }
+
+    .icon-arrow {
+        width: 5px;
+        height: 107.5px;
+        background-color: white;
+        border-radius: 5px;
+        position: relative;
+        top: 90px;
+        left: 50%;
     }
     .grid-container {
         margin: 0 auto;
@@ -378,7 +512,7 @@ footer {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 100%;
-        height: 312px;
+        height: 311px;
     }
     #image-stand-out {
         order: 3;
@@ -421,13 +555,31 @@ footer {
         color:#808397;
         letter-spacing: -0.13px;
     }
-    .grid-white-text-item > a {
-        font-family: 'Fraunces', serif;
-        font-size: 15px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: black;
-        text-decoration: none;
+    .learn-more-wrapper {
+        position: relative;
+        left: -60px;
+    }
+    #learn-more-decoration-transform{
+        display: inline-block;
+        width: 137px;
+        height: 10px;
+        background-color: #FAD400;
+        opacity: 25%;
+        border-radius: 10px;
+        bottom: -21px;
+        left: -13px;
+        position: absolute;
+    }
+    #learn-more-decoration-stand{
+        display: inline-block;
+        width: 137px;
+        height: 10px;
+        background-color: #FE7766;
+        opacity: 25%;
+        border-radius: 10px;
+        bottom: -21px;
+        left: -13px;
+        position: absolute;
     }
     .grid-image-text-item {
         display: flex;
@@ -483,27 +635,39 @@ footer {
     
     .testimonials {
         margin: 0 auto;
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 1258px;
         width: 375px;
     }
-    .testimonials > h3 {
+    .testimonials-list-title > h3 {
         text-align: center;
         font-family: 'Fraunces', serif;
         font-weight: 900;
-        font-size: 20px;
+        font-size: 16px;
         color: #A7AAAD;
-        padding-top: 2.5em;
+        padding-top: 0em;
         text-transform: uppercase;
         letter-spacing: 5px;
+        width: 350px;
     
     }
     .testimonials-list {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         height: 1108px;
+        width: 350px;
     }
+    .testimonials-list-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 1024px;
+    }
+
     .testimonials-item {
         display: flex;
         flex-direction: column;
